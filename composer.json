@@ -1,0 +1,21 @@
+{
+    "name": "bitverse/identicon-bundle",
+    "type": "symfony-bundle",
+    "description": "A Symfony 2 bundle for bitverse/identicon.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kuba Birecki",
+            "email": "kuba.birecki@bitverse.io"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "bitverse/identicon": "1.1.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bitverse\\IdenticonBundle\\": ""
+        }
+    }
+}
