@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="identicon.preprocessor">Bitverse\Identicon\Preprocessor\MD5Preprocessor</parameter>
+        <parameter key="identicon.generator">Bitverse\Identicon\Generator\PixelsGenerator</parameter>
+    </parameters>
+
+    <services>
+        <service id="bitverse.identicon.preprocessor" class="%identicon.preprocessor%" public="false" />
+        <service id="bitverse.identicon.generator" class="%identicon.generator%" public="false" />
+
+        <service id="bitverse.identicon" class="Bitverse\Identicon\Identicon">
+            <argument type="service" id="bitverse.identicon.preprocessor" />
+            <argument type="service" id="bitverse.identicon.generator" />
+        </service>
+    </services>
+</container>
