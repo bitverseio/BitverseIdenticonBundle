@@ -15,12 +15,10 @@ class Configuration implements ConfigurationInterface
         $root
             ->children()
                 ->variableNode('preprocessor')
-                    ->isRequired()
-                    ->cannotBeEmpty()
+                    ->defaultValue('Bitverse\Identicon\Preprocessor\MD5Preprocessor')
                 ->end()
                 ->variableNode('generator')
-                    ->isRequired()
-                    ->cannotBeEmpty()
+                    ->defaultValue('Bitverse\Identicon\Generator\PixelsGenerator')
                 ->end()
             ->end();
 
