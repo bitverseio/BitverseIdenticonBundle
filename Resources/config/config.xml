@@ -17,5 +17,7 @@
             <argument type="service" id="bitverse.identicon.preprocessor" />
             <argument type="service" id="bitverse.identicon.generator" />
         </service>
+
+        <service id="identicon" alias="bitverse.identicon" />
     </services>
 </container>
