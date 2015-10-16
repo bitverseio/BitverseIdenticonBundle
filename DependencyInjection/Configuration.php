@@ -10,15 +10,28 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $builder = new TreeBuilder();
-        $root = $builder->root('identicon');
+        $root = $builder->root('bitverse_identicon');
 
         $root
             ->children()
-                ->variableNode('preprocessor')
-                    ->defaultValue('Bitverse\Identicon\Preprocessor\MD5Preprocessor')
+                ->arrayNode('preprocessor')
+                    ->addDefaultsIfNotSet()
+                    ->children()
+                        ->variableNode('class')
+                            ->defaultValue('Bitverse\Identicon\Preprocessor\MD5Preprocessor')
+                        ->end()
+                    ->end()
                 ->end()
-                ->variableNode('generator')
-                    ->defaultValue('Bitverse\Identicon\Generator\PixelsGenerator')
+                ->arrayNode('generator')
+                    ->addDefaultsIfNotSet()
+                    ->children()
+                        ->variableNode('class')
+                            ->defaultValue('Bitverse\Identicon\Generator\PixelsGenerator')
+                        ->end()
+                        ->variableNode('background_color')
+                            ->defaultValue('#EEEEEE')
+                        ->end()
+                    ->end()
                 ->end()
             ->end();
 
