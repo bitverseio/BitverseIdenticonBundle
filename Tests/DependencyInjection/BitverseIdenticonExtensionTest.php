@@ -16,7 +16,7 @@ class BitverseIdenticonExtensionTest extends AbstractExtensionTestCase
         $this->load($config);
 
         foreach ($parameters as $key => $param) {
-            $this->assertContainerBuilderHasParameter($key, $param);           
+            $this->assertContainerBuilderHasParameter($key, $param);
         }
 
         $this->assertContainerBuilderHasAlias('identicon', 'bitverse.identicon');
