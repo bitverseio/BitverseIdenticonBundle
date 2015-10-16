@@ -1,9 +1,3 @@
-bitverse_identicon:
-    preprocessor:
-        class: Bitverse\Identicon\Preprocessor\MD5Preprocessor
-    generator:
-        class: Bitverse\Identicon\Generator\PixelsGenerator
-
 services:
     bitverse.identicon.preprocessor:
         class: %bitverse_identicon.preprocessor.class%
@@ -15,7 +9,7 @@ services:
 
     bitverse.identicon:
         class: Bitverse\Identicon\Identicon
-        args: ["@bitverse.identicon.preprocessor", "@bitverse.identicon.generator"]
+        arguments: ["@bitverse.identicon.preprocessor", "@bitverse.identicon.generator"]
 
     identicon:
         alias: bitverse.identicon
