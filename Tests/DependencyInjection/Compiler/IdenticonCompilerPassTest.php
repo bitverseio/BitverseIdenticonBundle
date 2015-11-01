@@ -27,7 +27,7 @@ class IdenticonCompilerPassTest extends AbstractCompilerPassTestCase
         $this->assertContainerBuilderHasServiceDefinitionWithMethodCall(
             'bitverse.identicon',
             'setBackgroundColor',
-            [Color::parseHex('#444444')]
+            ['#444444']
         );
     }
 

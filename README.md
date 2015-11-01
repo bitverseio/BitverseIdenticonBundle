@@ -12,7 +12,7 @@ $ composer require bitverse/identicon-bundle
 
 Enable the bundle in ```app/AppKernel.php```:
 
-```
+```php
 <?php
 
 class AppKernel extends Kernel

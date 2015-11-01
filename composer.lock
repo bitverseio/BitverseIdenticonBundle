@@ -5,23 +5,27 @@
         "This file is @generated automatically"
     ],
     "hash": "cdaac0e4e7a12964686e24606b2c6e72",
+    "content-hash": "e95eea3f455065804d97c6f91ca06152",
     "packages": [
         {
             "name": "bitverse/identicon",
-            "version": "1.1.0",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bitverseio/identicon.git",
-                "reference": "872234d81c9f6268fc719708e20cfe7b2e15e30b"
+                "reference": "65a50a5a8bd86b3591795937f9652b2e9075626c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bitverseio/identicon/zipball/872234d81c9f6268fc719708e20cfe7b2e15e30b",
-                "reference": "872234d81c9f6268fc719708e20cfe7b2e15e30b",
+                "url": "https://api.github.com/repos/bitverseio/identicon/zipball/65a50a5a8bd86b3591795937f9652b2e9075626c",
+                "reference": "65a50a5a8bd86b3591795937f9652b2e9075626c",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.0"
             },
             "type": "library",
             "autoload": {
@@ -40,7 +44,7 @@
                 }
             ],
             "description": "A PHP library for generating identicons.",
-            "time": "2015-10-10 13:17:14"
+            "time": "2015-11-01 21:19:42"
         },
         {
             "name": "symfony/config",

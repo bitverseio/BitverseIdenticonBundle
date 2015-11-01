@@ -22,9 +22,9 @@ class IdenticonCompilerPass implements CompilerPassInterface
         $definition->addMethodCall(
             'setBackgroundColor',
             [
-                Color::parseHex($container->getParameter(
+                $container->getParameter(
                     'bitverse_identicon.generator.background_color'
-                ))
+                )
             ]
         );
     }
