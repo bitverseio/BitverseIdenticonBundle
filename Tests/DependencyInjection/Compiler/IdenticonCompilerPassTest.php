@@ -15,7 +15,7 @@ class IdenticonCompilerPassTest extends AbstractCompilerPassTestCase
      */
     public function processTest()
     {
-        $this->setDefinition('bitverse.identicon', new Definition());
+        $this->setDefinition('bitverse.identicon.generator', new Definition());
 
         $this->setParameter(
             'bitverse_identicon.generator.background_color',
@@ -25,7 +25,7 @@ class IdenticonCompilerPassTest extends AbstractCompilerPassTestCase
         $this->compile();
 
         $this->assertContainerBuilderHasServiceDefinitionWithMethodCall(
-            'bitverse.identicon',
+            'bitverse.identicon.generator',
             'setBackgroundColor',
             ['#444444']
         );

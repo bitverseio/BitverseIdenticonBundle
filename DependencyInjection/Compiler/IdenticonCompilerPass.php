@@ -11,13 +11,13 @@ class IdenticonCompilerPass implements CompilerPassInterface
     public function process(ContainerBuilder $container)
     {
         if (
-            !$container->has('bitverse.identicon') ||
+            !$container->has('bitverse.identicon.generator') ||
             !$container->hasParameter('bitverse_identicon.generator.background_color')
         ) {
             return;
         }
 
-        $definition = $container->findDefinition('bitverse.identicon');
+        $definition = $container->findDefinition('bitverse.identicon.generator');
 
         $definition->addMethodCall(
             'setBackgroundColor',
